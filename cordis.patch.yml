@@ -1,0 +1,10 @@
+# dsh-dense-ui bundle patch.
+#
+# Registers this package's browser half (the client plugin that owns the
+# settings panel + CSS injection) as a `dsh.client` web row. The host half
+# (`lib/index.js`, the settings namespace registration) is mounted via the
+# `insert` below so both faces of the same package load together.
+
+- insert:
+    - id: dense-ui
+      name: dsh-dense-ui
